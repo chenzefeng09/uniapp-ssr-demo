@@ -3,8 +3,9 @@
 3、node server/app.js  
 4、浏览器访问http://localhost:8081/pages/location/test  
 
+node版本：v12.19.1
 报错TypeError: Cannot read property 'style' of undefined  
-node版本：v12.19.1  
+  
 `
 context.url /pages/location/test  
 444 [  
