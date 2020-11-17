@@ -1,0 +1,44 @@
+/* pages/location/location.wxss */
+.filter_level{
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+}
+.filter_level::after {
+  display: block;
+  content: '';
+  height: 190rpx;
+}
+.level0{
+  background-color: #fff;
+}
+.level1{
+  background-color: #efefef;
+  left: 33.3%;
+  z-index: 10;
+}
+.level2{
+  background-color: #dfdfdf;
+  left: 66.6%;
+  z-index: 11;
+}
+.cate_level1{
+  width: 67%;
+}
+.filter_level0_item_active_true{
+  background-color: #efefef;
+}
+.filter_level1_item_active_true{
+  background-color: #dfdfdf; 
+}
+
+.filter_level_item{
+  padding-left: 24rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.filter_level0_item{
+  border-top: 1rpx solid #ddd;
+}
