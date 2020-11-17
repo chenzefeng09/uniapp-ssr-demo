@@ -1,0 +1,32 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "ssr test",
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 800
+      }
+    },
+    {
+      "path": "pages/location/test",
+      "style": {
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 800
+      }
+    },
+    {
+      "path": "pages/location/location",
+      "style": {
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 800
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "一亩田",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
