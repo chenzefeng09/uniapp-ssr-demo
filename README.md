@@ -1,7 +1,32 @@
-1、npm install  
-2、npm run build:ssr-server  
-3、node server/app.js  
-4、浏览器访问http://localhost:8081/pages/location/test  
+### 1、npm install  
+### 2、npm run build:ssr-server  
+报错
+```
+Module parse failed: Export 'components' is not defined (6:52)
+File was processed with these loaders:
+ * ./node_modules/_@dcloudio_vue-cli-plugin-uni@2.0.0-28620200814002@@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js
+ * ./node_modules/_@dcloudio_vue-cli-plugin-uni@2.0.0-28620200814002@@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js
+ * ./node_modules/_@dcloudio_vue-cli-plugin-uni@2.0.0-28620200814002@@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/filter-modules-template.js
+ * ./node_modules/_@dcloudio_vue-cli-plugin-uni@2.0.0-28620200814002@@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js
+ * ./node_modules/_@dcloudio_vue-cli-plugin-uni@2.0.0-28620200814002@@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/index.js
+ * ./node_modules/_@dcloudio_vue-cli-plugin-uni@2.0.0-28620200814002@@dcloudio/vue-cli-plugin-uni/packages/webpack-scoped-loader/index.js
+You may need an additional loader to handle the result of these loaders.
+| var staticRenderFns = []
+| 
+> export { render, staticRenderFns, recyclableRender, components }
+```
+将vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js中  
+
+`
+export { render, staticRenderFns, recyclableRender, components }
+`  
+改为  
+`
+export { render, staticRenderFns, recyclableRender }
+`
+后可以ssr编译通过
+### 3、node server/app.js  
+### 4、浏览器访问http://localhost:8081/pages/location/test  
 
 node版本：v12.19.1
 报错TypeError: Cannot read property 'style' of undefined  
